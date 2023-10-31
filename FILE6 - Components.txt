@@ -1,0 +1,21 @@
+    REACT - COMPONENTS
+            React component is a JS function that you can sprinkle with Markup.
+
+        Let's deep dive into writing our first component.
+
+        1. Export the component.
+        2. Defining the function.
+        3. Implement the Markup.
+        4. Call the component.
+
+    NOTE: Never define a component inside another component.
+
+    1. export default function functionName(){
+        return(
+            MARKUP
+        );
+    }    
+
+    2. The first alphabet of the component function name should be Uppercase.
+
+    3. We can't write a component inside another component.
