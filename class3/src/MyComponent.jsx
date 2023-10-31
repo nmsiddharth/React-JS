@@ -16,7 +16,7 @@
               <div className="col">
               <h1>Welcome to MyComponent Function (CHILD-COMPONENT)</h1>
               </div>
-              <MyComponent1/>
+              {/* <MyComponent1/> */}
             </div>
         );
     }
