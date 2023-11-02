@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 // import MyComponent from './MyComponent';
-import Ex4 from './components/Ex4';
+import Ex10 from './components/Ex10';
 
 function App() {
   return (
@@ -14,8 +14,26 @@ function App() {
     {/* <MyComponent></MyComponent> */}
     {/* <MyComponent/> */}
 
-   <Ex4/>
+   {/* <Ex5 
+   img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D" name="Parent Card" 
+   lorem="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum atque tempora officia amet iste qui accusamus libero nostrum excepturi maiores blanditiis adipisci voluptas, non distinctio pariatur totam dignissimos quaerat."/> */}
+   
+  {/* <Ex6 
+   img="https://cdn.pixabay.com/photo/2023/06/20/01/30/ai-generated-8075768_640.jpg" 
+   name="Parent Card" 
+   lorem="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum atque tempora officia amet iste qui accusamus libero nostrum excepturi maiores blanditiis adipisci voluptas, non distinctio pariatur totam dignissimos quaerat."/>  */}
 
+   {/* <Ex9 
+   img="https://cdn.pixabay.com/photo/2023/06/20/01/30/ai-generated-8075768_640.jpg" 
+   name="Parent Card" 
+   lorem="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum atque tempora officia amet iste qui accusamus libero nostrum excepturi maiores blanditiis adipisci voluptas, non distinctio pariatur totam dignissimos quaerat."/>  */}
+
+  {/* <Ex9 
+   img="https://cdn.pixabay.com/photo/2023/06/20/01/30/ai-generated-8075768_640.jpg" 
+   name="Parent Card" 
+   lorem="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum atque tempora officia amet iste qui accusamus libero nostrum excepturi maiores blanditiis adipisci voluptas, non distinctio pariatur totam dignissimos quaerat."/>  */}
+
+   <Ex10/>
    </div>
   );
 }
