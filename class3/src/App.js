@@ -23,7 +23,9 @@ function App() {
    name="Parent Card" 
    lorem="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum atque tempora officia amet iste qui accusamus libero nostrum excepturi maiores blanditiis adipisci voluptas, non distinctio pariatur totam dignissimos quaerat."/>  */}
 
-   {/* <Ex9 
+   {/* <Ex7/> */}
+
+   {/* <Ex8 
    img="https://cdn.pixabay.com/photo/2023/06/20/01/30/ai-generated-8075768_640.jpg" 
    name="Parent Card" 
    lorem="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum atque tempora officia amet iste qui accusamus libero nostrum excepturi maiores blanditiis adipisci voluptas, non distinctio pariatur totam dignissimos quaerat."/>  */}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // Global Variables
-let x=21;
+let x = 21;
 const y =124;
 let title = "Welcome to String data"
 let isAdmin = true
