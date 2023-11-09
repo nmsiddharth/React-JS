@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Address from './Address';
+import BankDetails from './BankDetails';
 
 export default class UserCard extends Component {
     constructor(props) {
@@ -16,13 +17,17 @@ export default class UserCard extends Component {
                     <img src={image ? image: "#"} alt="" className='rounded-circle img-fluid'/>
                     <h4 className='text-dark'>{firstName + " " + lastName}</h4>
                     <div className="card-body">
-                        <details>
-                            <summary>Details</summary>
-                            <p className='text-secondary'>
+                    <p className='text-secondary'>
                                 <i className='bi bi-envelope-open-fill'></i>
                                 <span className="text-primary">{email}</span>
                             </p>
+                        <details>
+                            <summary>Address Details</summary>
                             <Address addr = {this.props.address}/>
+                        </details>
+                        <details>
+                          <summary>Bank Details</summary>
+                          <BankDetails bank = {this.props.bank}/>
                         </details>
                     </div>
                 </div>
