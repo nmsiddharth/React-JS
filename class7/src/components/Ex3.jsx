@@ -38,8 +38,6 @@ const Ex3 = () => {
 
                 <button className='btn btn-outline-danger' onClick={()=> setCount(count - 1)}>Decrement</button>
                 <p><b>Result : </b>{count}</p>
-
-
           </div>
         </div>
       </div>
@@ -48,16 +46,15 @@ const Ex3 = () => {
     <div className="container">
       <div className="row">
         <div className="col-12 text-center">
-
           <div className="lead my3 p-3 border">
             <p>
               <b>5) Use SYNTHETIC EVENTS = directly inside an onclick event handler</b>
             </p>
             <button className='btn btn-outline-info' 
             value="Be-Practical"
-            onClick={(e)=> alert(e.target.value)}>
+            onClick={(e)=> alert(e.target.value)}>    
                 Ex3 - Synthetic Handler 
-                </button>
+                </button>  
           </div>
         </div>
       </div>
