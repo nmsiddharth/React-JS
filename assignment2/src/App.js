@@ -2,42 +2,67 @@ import React, { Component } from 'react'
 import "./App.css"
 
 export default class App extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      result: ""
+    }
+  }
+
+  click(a){
+    this.setState({result:a.target.value})
+  }
+
+  clear(){
+    this.setState({result:""})
+  }
+
+  delete(){
+
+  }
+
+  calculate(){
+    this.setState()
+  }
+
   render() {
     return (
       <div>
         <div className="container">
           <div className="holder">
-            <input type="text" />
+            <h1>CALCULATOR</h1>
+            <input type="text" value={this.state.result}/>
             <table>
               <tr>
                 <td colSpan={2}>
-                  <button>AC</button>
+                  <button onClick={this.clear.bind(this)}>AC</button>
                 </td>
-                <td> <button>DEL</button></td>
-                <td> <button>/</button></td>
+                <td> <button onClick={this.delete}>DEL</button></td>
+                <td> <button onClick={this.click.bind(this)} value={"/"}>&divide;</button></td>
               </tr>
               <tr>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-                <td><button>9</button></td>
-                <td><button>*</button></td>
+                <td><button onClick={this.click.bind(this)} value={"7"}>7</button></td>
+                <td><button onClick={this.click.bind(this)} value={"8"}>8</button></td>
+                <td><button onClick={this.click.bind(this)} value={"9"}>9</button></td>
+                <td><button onClick={this.click.bind(this)} value={"*"}>x</button></td>
               </tr>
               <tr>
-              <td><button>4</button></td>
-              <td><button>5</button></td>
-              <td><button>6</button></td>
-              <td><button>&minus;</button></td>
+              <td><button onClick={this.click.bind(this)} value={"4"}>4</button></td>
+              <td><button onClick={this.click.bind(this)} value={"5"}>5</button></td>
+              <td><button onClick={this.click.bind(this)} value={"6"}>6</button></td>
+              <td><button onClick={this.click.bind(this)} value={"-"}>&minus;</button></td>
               </tr>
               <tr>
-              <td><button>1</button></td>
-              <td><button>2</button></td>
-              <td><button>3</button></td>
-              <td><button>+</button></td>
+              <td><button onClick={this.click.bind(this)} value={"1"}>1</button></td>
+              <td><button onClick={this.click.bind(this)} value={"2"}>2</button></td>
+              <td><button onClick={this.click.bind(this)} value={"3"}>3</button></td>
+              <td><button onClick={this.click.bind(this)} value={"+"}>+</button></td>
               </tr>
               <tr>
-              <td><button>0</button></td>
-              <td><button>.</button></td>
-              <td colSpan={2}><button>=</button></td>
+              <td><button onClick={this.click.bind(this)} value={"0"}>0</button></td>
+              <td><button onClick={this.click.bind(this)} value={"."}>.</button></td>
+              <td colSpan={2}><button onClick={this.calculate}>=</button></td>
               </tr>
             </table>
            

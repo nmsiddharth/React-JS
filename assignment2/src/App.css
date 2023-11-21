@@ -1,6 +1,7 @@
 *{
   padding: 0%;
   margin: 0%;
+  box-sizing: border-box;
 }
 .container{
   width: 100%;
@@ -9,4 +10,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.holder{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(119, 123, 129, 0.7);
+}
+h1{
+  color: white;
+}
+.holder>input{
+  width: 100%;
+ height: 60px;
+ margin: 10px 0px;
+ font-size: 35px;
+ border-radius: 10px;
+}
+table tr td{
+  border-collapse: collapse;
+  padding: 5px;
+}
+button{
+  font-size: 30px;
+  padding: 20px 35px;
+  width: 100%;
+  border-radius:10px;
+  border:none;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #1c1c1c;
+  color: #fff;
 }

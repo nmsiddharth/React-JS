@@ -5,9 +5,9 @@ REACT LIFECYCLE METHODS
         2). Updating phase
             => This phase occurs when a component's props or state changes, and the component needs to be updated in the DOM.
         3). Unmounting phase
-            => The Unmounting phase refers to the lifecycle stage ehn a component is being removed from the DOM and is no longer rendered or accessible.
+            => The Unmounting phase refers to the lifecycle stage when a component is being removed from the DOM and is no longer rendered or accessible.
 
-    -> These methods allow you to control the         component's behaviour and perform specific actions at different stages of its lifecycle.    
+    -> These methods allow you to control the component's behaviour and perform specific actions at different stages of its lifecycle.    
 
 MOUNTING PHASE METHODS
     1). constructor() :
@@ -19,3 +19,8 @@ MOUNTING PHASE METHODS
         -> This method returns the HTML that should be rendered for this component.
         -> The render() is responsible for generating component's virtual DOM representation based on its current props and state.
         -> it is called everytime the component needs to be re-rendered, either because its props or state have changed, or because a parent component has been re-rendered. 
+
+    3). componentWillMount() :
+            // Presently they are removed. It exist upto react 16v.
+             
+        -> 
