@@ -1,0 +1,19 @@
+DEPENDENCIES (package.json)
+
+STEP-1 : npx create-react-app music-player (React-App)
+STEP-2 : npm i bootstrap
+STEP-3 : npm i bootstrap-icons
+STEP-4 : npm i react-router-dom
+
+COMPONENTS
+
+    1). Menu.jsx - Used to create a navigation bar.
+
+REACT-ROUTER-DOM
+    1). BrowserRouter :
+        => It is a router implementation that uses the HTML5 history API (pushState, replaceState, and the popState event) to keep your UI in sync with the URL.
+    
+    2). Router :
+        => It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page.
+
+    3). Route :    
