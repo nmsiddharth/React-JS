@@ -11,13 +11,10 @@ function App() {
    <BrowserRouter>
    <Menu/>
    <Routes>
-    <Route path="/" element={<Music />} />
-    <Route path="/contact" element={<Contact />} />
-    <Route path="/track" element={<Track />} />
-    <Route path="/*" element={<Pnf />} />
-
-
-
+    <Route path={"/"}element={<Music />} />
+    <Route path={"/contact"} element={<Contact />} />
+    <Route path={"/track/:artistId"} element={<Track />} />
+    <Route path={"/*"} element={<Pnf />} />
    </Routes>
     </BrowserRouter>
   );

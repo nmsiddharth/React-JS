@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Track = () => {
+const Pnf = () => {
   return (
     <div className="container">
     <div className="row">
         <div className="col">
-            <h1 className="display-3 text-success text-center">Track</h1>
+            <h3 className="text-center text-danger">Requested path Not Found</h3>
         </div>
     </div>
-   </div>
+</div>
   )
 }
 
-export default Track
+export default Pnf

@@ -5,7 +5,7 @@ const Pnf = () => {
     <div className="container">
     <div className="row">
         <div className="col">
-            <h1 className="display-3 text-danger">Requested path Not found</h1>
+            <h1 className="display-3 text-danger text-center">Requested path Not found</h1>
         </div>
     </div>
    </div>
