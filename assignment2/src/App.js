@@ -11,7 +11,7 @@ export default class App extends Component {
   }
 
   click(a){
-    this.setState({result:a.target.value})
+    this.setState({result:this.state.result.concat(a.target.value)})
   }
 
   clear(){
@@ -19,11 +19,17 @@ export default class App extends Component {
   }
 
   delete(){
-
+   this.setState({result:this.state.result.slice(0,-1)});
   }
 
   calculate(){
-    this.setState()
+    try {
+      this.setState({
+        result:eval(this.state.result).toString()
+      });
+    } catch (error) {
+      this.setState({result:"error"});
+    }
   }
 
   render() {
@@ -38,7 +44,7 @@ export default class App extends Component {
                 <td colSpan={2}>
                   <button onClick={this.clear.bind(this)}>AC</button>
                 </td>
-                <td> <button onClick={this.delete}>DEL</button></td>
+                <td> <button onClick={this.delete.bind(this)}>DEL</button></td>
                 <td> <button onClick={this.click.bind(this)} value={"/"}>&divide;</button></td>
               </tr>
               <tr>
@@ -62,7 +68,7 @@ export default class App extends Component {
               <tr>
               <td><button onClick={this.click.bind(this)} value={"0"}>0</button></td>
               <td><button onClick={this.click.bind(this)} value={"."}>.</button></td>
-              <td colSpan={2}><button onClick={this.calculate}>=</button></td>
+              <td colSpan={2}><button onClick={this.calculate.bind(this)}>=</button></td>
               </tr>
             </table>
            

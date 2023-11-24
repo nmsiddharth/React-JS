@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import key from '../config/token'
 import Artist from '../screen/Artist';
+import Search from '../screen/Search';
 
 // useEffect => a hook used to call api request
 
@@ -37,6 +38,9 @@ const Music = () => {
             <h1 className="display-3 text-success text-center">Music</h1>
         </div>
     </div>
+
+    <Search searchName={searchArtist}/>
+
     <div className="row">
       {
         artist.map((item, index)=>{

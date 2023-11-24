@@ -1,6 +1,15 @@
 import React from "react";
+import { useState } from "react";
 
-const Header = () => {
+const Header = (props) => {
+  const [h1, setH1] = useState();
+  const [h2, setH2] = useState();
+
+     const submitHandler = (e)=>{
+      e.preventDefault();
+      console.log(h1);
+}
+
   return (
     <div className="container">
       <div className="row">
@@ -17,7 +26,7 @@ const Header = () => {
           </label>
         </div>
         <div className="col-auto">
-          <input type="number" className="form-control" id="inputPassword2" />
+          <input type="number" className="form-control" id="i1" onChange={(e)=>setH1(e.target.value)}/>
         </div>
       </form>
       <form className="row g-3 my-3">
@@ -27,11 +36,11 @@ const Header = () => {
           </label>
         </div>
         <div className="col-auto">
-          <input type="number" className="form-control" id="inputPassword2" />
+          <input type="number" className="form-control" id="i2" />
         </div>
       </form>
     <div className="col text-center">
-    <button type="button" class="btn btn-primary m-4">Addition</button>
+    <button type="button" class="btn btn-primary m-4" onClick={submitHandler}>Addition</button>
       <button type="button" class="btn btn-secondary m-4">Subtraction</button>
       <button type="button" class="btn btn-warning m-4">Multiplication</button>
       <button type="button" class="btn btn-danger m-4">Division</button>

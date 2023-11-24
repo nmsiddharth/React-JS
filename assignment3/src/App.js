@@ -11,9 +11,13 @@ import Home from './components/Home';
 
 
 function App() {
+
+  const passing = (inp1, inp2, type)=>{
+    console.log(inp1,inp2);
+  }
   return (
    <BrowserRouter>
-   <Header/>
+   <Header test = {passing}/>
    <Routes>
     <Route path={'/'} element={<Home/>}/>
     <Route path={'/addition'} element={<Addition/>}/>
