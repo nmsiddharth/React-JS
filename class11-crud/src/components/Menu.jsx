@@ -5,19 +5,23 @@ const Menu = () => {
   return (
     <div className="navbar navbar-expand-md navbar-dark bg-secondary">
       <div className="container">
-        <a href="#" className="navbar-brand">
+        <NavLink to={`/`} className="navbar-brand">
           CRUD-APP
-        </a>
+        </NavLink>
         <button className="navbar-toggler">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="menu">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link">Login</a>
+              <NavLink to={`/login`} className="nav-link">
+                Login
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Register</a>
+              <NavLink to={`/register`} className="nav-link">
+                Register
+              </NavLink>
             </li>
           </ul>
         </div>
