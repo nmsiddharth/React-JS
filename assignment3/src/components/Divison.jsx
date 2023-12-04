@@ -1,9 +1,9 @@
-import { useState } from "react"
+import React, {useState} from 'react'
 
-const Modulo = () => {
+const Divison = () => {
   const [num1, setNum1] = useState('');
   const [num2, setNum2] = useState('');
-  const [mod, setMod] = useState();
+  const [divi, setDivi] = useState();
 
   function num1Handler(e) {
     setNum1(e.target.value);
@@ -15,13 +15,13 @@ const Modulo = () => {
 
   function submitHandler(e) {
     e.preventDefault();
-    setMod(Number(num1) % Number(num2));
-    console.log(mod); // Display in console or use it in your UI
+    setDivi(Number(num1) / Number(num2));
+    console.log(divi); // Display in console or use it in your UI
   }
   return (
     <div className="px-5 my-2">
     <center>
-      <h1 className='text-secondary my-3'>Modulus</h1>
+      <h1 className='text-secondary my-3'>Divison</h1>
     </center>
     <form onSubmit={submitHandler}>
       <div className="row g-3">
@@ -42,10 +42,10 @@ const Modulo = () => {
       </div>
     </form>
       <div className="d-flex justify-content-center">
-        <h3 className='text-success'>Modulus of {`${num1} % ${num2}`} is = {`${mod}`}</h3>
+        <h3 className='text-success'>Divison of {`${num1} / ${num2}`} is = {`${divi}`}</h3>
       </div>
   </div>
   )
 }
 
-export default Modulo
+export default Divison

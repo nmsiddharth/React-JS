@@ -1,33 +1,29 @@
+
 import './App.css';
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import Header from './components/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Menu from './components/Menu';
 import Addition from './components/Addition';
 import Subtraction from './components/Subtraction';
 import Multiplication from './components/Multiplication';
-import Division from './components/Division';
-import Modulo from './components/Modulo';
+import Divison from './components/Divison';
+import Exponent from './components/Exponent';
 import Pnf from './components/Pnf';
-import Home from './components/Home';
-
+import Modulo from './components/Modulo';
 
 function App() {
-
-  const passing = (inp1, inp2, type)=>{
-    console.log(inp1,inp2);
-  }
   return (
-   <BrowserRouter>
-   <Header test = {passing}/>
-   <Routes>
-    <Route path={'/'} element={<Home/>}/>
-    <Route path={'/addition'} element={<Addition/>}/>
-    <Route path={'/subtraction'} element={<Subtraction/>}/>
-    <Route path={'/multiplication'} element={<Multiplication/>}/>
-    <Route path={'/division'} element={<Division/>}/>
-    <Route path={'/modulo'} element={<Modulo/>}/>
-    <Route path={'/*'} element={<Pnf/>}/>
-   </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Menu></Menu>
+      <Routes>
+        <Route path='/addition' element={<Addition></Addition>}></Route>
+        <Route path='/subtraction' element={<Subtraction></Subtraction>}></Route>
+        <Route path='/multiplication' element={<Multiplication></Multiplication>}></Route>
+        <Route path='/divison' element={<Divison></Divison>}></Route>
+        <Route path='/exponent' element={<Exponent></Exponent>}></Route>
+        <Route path={'/*'} element={<Pnf/>}/>
+        <Route path={'/modulo'} element={<Modulo/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
