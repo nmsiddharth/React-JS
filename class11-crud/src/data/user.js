@@ -31,6 +31,7 @@ const saveUsers = (data) => {
     localStorage.setItem("users", JSON.stringify(data));
 };
 
+// Login Handler
 const loginUser = async (user) => {
     const extUser = users.find((item)=> item.email === user.email);
   
@@ -38,8 +39,26 @@ const loginUser = async (user) => {
         toast.warning(`${user.email} not exists`);
     }
     else{
-        toast.success(`${user.email}  exists`);
+      if (extUser.password === user.password) {
+        localStorage.setItem('loginStatus = ',true);
+        toast.success('User Login success');
+        window.location.href = '/';
+      }
+      else{
+        toast.warning('Passwords are not matching');
+
+      }
 
     }
-}
-export { registerUser, loginUser };
+};
+
+// Logout Handler
+const logoutUser = async () => {
+    if (localStorage.getItem('loginStatus') === "true") {
+        localStorage.removeItem('loginStatus');
+        toast.success("Successfully Logout");
+        window.location.href = "/";
+    }
+};
+
+export { registerUser, loginUser, logoutUser };
