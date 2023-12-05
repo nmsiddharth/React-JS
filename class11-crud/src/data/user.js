@@ -40,7 +40,7 @@ const loginUser = async (user) => {
     }
     else{
       if (extUser.password === user.password) {
-        localStorage.setItem('loginStatus = ',true);
+        localStorage.setItem('loginStatus', true); 
         toast.success('User Login success');
         window.location.href = '/';
       }
@@ -54,7 +54,7 @@ const loginUser = async (user) => {
 
 // Logout Handler
 const logoutUser = async () => {
-    if (localStorage.getItem('loginStatus') === "true") {
+    if (localStorage.getItem('loginStatus') === 'true') {
         localStorage.removeItem('loginStatus');
         toast.success("Successfully Logout");
         window.location.href = "/";

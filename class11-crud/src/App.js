@@ -6,6 +6,8 @@ import Register from './components/Register';
 import Pnf from './components/Pnf';
 import { ToastContainer } from 'react-toastify';
 import Home from './components/Home';
+import ProtectedRoute from './authGuard/ProtectedRoute';
+import Create from './components/Create';
 
 function App() {
   return (
@@ -13,7 +15,10 @@ function App() {
       <Menu/>
       <ToastContainer autoClose={4000} position={'top-right'}/>
       <Routes>
-        <Route path={"/"} element={<Home/>} />
+        <Route element= {<ProtectedRoute/>}>
+              <Route path={"/"} element={<Home/>} />
+              <Route path={"/create"} element={<Create/>} />
+        </Route>
         <Route path={"/login"} element={<Login/>} />
         <Route path={"/register"} element={<Register/>} />
         <Route path={"/*"} element={<Pnf/>} />
