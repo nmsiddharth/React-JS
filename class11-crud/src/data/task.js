@@ -36,4 +36,41 @@ const createTask = async (task) => {
     };
 };
 
-export { createTask };
+// Get All Tasks
+const readAllTask = () => {
+    return tasks;
+};
+
+// Delete Single Task
+const deleteTask = (id) => {
+    try {
+        const taskIndex = tasks.findIndex((item)=> item.id===id);
+        tasks.splice(taskIndex, 1);
+        saveTask(tasks);
+        toast.success(`${id} Deleted Successfully!`);
+        window.location.href = "/";
+    } catch (error) {
+      toast.error(error.message)
+    }
+};
+
+// Get Single Task
+const readSingleTask = (id) => {
+    const data = tasks.find((item)=> item.id==id);
+    return data;
+};
+
+// Update Task
+const updateTask = (id, task) => {
+    try {
+        const taskIndex = tasks.findIndex((item)=> item.id===id);
+        tasks.splice(taskIndex, 1, task);
+        saveTask(tasks);
+        toast.success(`${id} Updated Successfully!`);
+        window.location.href = "/";
+    } catch (error) {
+      toast.error(error.message);
+    }
+};
+
+export { createTask, readAllTask, deleteTask, readSingleTask, updateTask };
