@@ -1,0 +1,11 @@
+{
+    "contacts": [
+        {
+            "name": "Siddu",
+            "email": "siddu@gmail.com",
+            "image": "http://localhost:3000/create",
+            "mobile": "9611849570",
+            "address": "kengeri"
+        }
+    ]
+}
