@@ -1,12 +1,18 @@
-import {
-    useState
-} from "react";
-import {
-    omit
-} from "lodash";
+import {useState} from "react";
+import {omit} from "lodash";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const baseURL = "http://localhost:3000";
+
+// Random Id Generate
+const randId = () => {
+    return Math.floor(Math.random()*10000);
+};
 
 const initState = {
+    id: randId(),
     name: "",
     email: "",
     image: "",
@@ -18,6 +24,9 @@ const initState = {
 function UserForm() {
     const [contact, setContact] = useState(initState);
     const [errors, setErrors] = useState({});
+
+    // useNavigate Reference, Internal Navigation
+    const navigate = useNavigate();
 
     // Error printing
     const errPrint = (prop, msg) => {
@@ -108,10 +117,19 @@ function UserForm() {
         });
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
         if (Object.keys(errors).length === 0 && Object.keys(contact).length !== 0 ) {
             console.log("New Contact : ",contact);
+
+        // Post Handler
+        await axios
+        .post(`${baseURL}/contacts`, contact)
+        .then((res)=>{
+            setContact(initState);
+            toast.success("User Created");
+            navigate("/")})
+        .catch((err)=>toast.error(err.message));
         } else {
             toast.error("Some errors are in form or fields are empty");
         }
