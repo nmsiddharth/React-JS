@@ -43,11 +43,11 @@ const UserCard = (props) => {
                 </ul>
             </div>
             <div className="card-footer">
-                <NavLink className="btn btn-sm btn-info">
+                <NavLink to={`/update/${id}`} className="btn btn-sm btn-info">
                     <i className='bi bi-pen'></i>
                 </NavLink>
                 <button className='btn btn-sm btn-danger float-end'>
-                    <i className='bi bi-trash'  onClick={()=> deleteContact(id)}></i>
+                    <i className='bi bi-trash' onClick={()=> deleteContact(id)}></i>
                 </button>
             </div>
         </div>
