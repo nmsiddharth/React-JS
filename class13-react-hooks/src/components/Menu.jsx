@@ -5,9 +5,9 @@ const Menu = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-success">
       <div className="container">
-        <a to={"/"} className="navbar-brand">
+        <NavLink to={"/"} className="navbar-brand">
           React Hooks
-        </a>
+        </NavLink>
 
         <button
           className="navbar-toggler"
@@ -18,46 +18,46 @@ const Menu = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="menu">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ">
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex1"} className="nav-link">
                 Ex1
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex2"} className="nav-link">
                 Ex2
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex3"} className="nav-link">
               Ex3
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex4"} className="nav-link">
               Ex4
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex5"} className="nav-link">
               Ex5
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex6"} className="nav-link">
                 Ex6
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex7"} className="nav-link">
               Ex7
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <NavLink to={"/ex8"} className="nav-link">
               Ex8
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
