@@ -59,6 +59,11 @@ const Menu = () => {
               Ex8
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to={"/ex9"} className="nav-link">
+              Ex9
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

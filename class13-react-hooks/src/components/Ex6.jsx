@@ -127,6 +127,19 @@ const Ex6 = () => {
               </form>
             </div>
           </div>
+          <div className="card my-3">
+            <div className="card-body">
+              <h4 className="card-title">Important Note : </h4>
+              <p>A ref is a plain JS object (current:some value)</p>
+              <p>React.createRef() is a factory returning a ref (current: null)</p>
+              <p>useRef(initValue) also returns a ref (current: initValue) akin to React.createRef(). Besides, it memorizes this ref to be persistant across multiple renders in a function component.</p>
+              <p>It is sufficient to use React.createRef in class components, as the ref object is assigned to an instance variable, hence accessible throughout the component and its lifecycle.</p>
+              <p><strong>Replace useRef with useState + createRef</strong></p>
+              <p>1). useRef() is basically useState(current: initValue)[0].</p>
+              <p>2). useRef(null) is basically useState(React.createRef())[0].</p>
+              <p>3). useState causes a re-render in contrast to useRef. More formally, Reat compares the old and new object reference for useState, when a new value is set via its setter method. If we mutate the state of useState directly (opposed to setter invocation), its behaviour more or less becomes equivalent to useRef, as no re-render is triggered anymore:</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
