@@ -6,7 +6,9 @@ export const DataContext = createContext();
 
 function DataProvider(props){
     const data = {
-        userApi : UserAPI()
+        userApi : UserAPI(),
+        // postApi: usePostapi(),
+        // commentApi: useCommentApi()
     }
 
     return(

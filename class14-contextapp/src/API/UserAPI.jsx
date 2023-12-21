@@ -10,7 +10,7 @@ const UserAPI = () => {
         const readUsers = async () => {
             const res = axios.get(`${url}/users`)
            .then((out)=> {
-            console.log(out);
+            //console.log(out);
             setUser(out.data);
            }).catch(error => toast.error(error.message));
         }
