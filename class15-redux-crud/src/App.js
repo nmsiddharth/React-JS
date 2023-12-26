@@ -1,36 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
-import axios from 'axios'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Menu from './components/Menu'
+import { ToastContainer } from 'react-toastify'
+import Home from './components/Home';
+import Pnf from './components/Pnf';
+import Update from './components/Update';
+import Create from './components/Create';
 
-function App() {
-  const data = async () => {
-    await axios.get("/blogs").then((res) => {
-      console.log(res)
-    }).catch(err => console.log(err))
-  }
-  
-  useEffect(() => {
-    data()
-  },[])
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Menu/>
+      <ToastContainer autoClose={3000} position={'top-right'}/>
+      <Routes>
+        <Route path={`/`} element={<Home/>}/>
+        <Route path={`/create`} element={<Create/>}/>
+        <Route path={`/update/:id`} element={<Update/>}/>
+        <Route path={`/*`} element={<Pnf/>}/>
+
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
